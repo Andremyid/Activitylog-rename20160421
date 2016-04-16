@@ -9,6 +9,6 @@ return [
 
 	'deleteRecordsOlderThanMonths' => 2,
 
-	'autoLoadAlias' => true,
+	'autoAliasLoader' => true,
 
 	];
