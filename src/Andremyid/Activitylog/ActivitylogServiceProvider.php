@@ -20,6 +20,10 @@ class ActivitylogServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 		$this->package('andremyid/activitylog');
+
+		if (! file_exists(app_path('config/activitylog.php'))) {
+			copy(__DIR__ . '/../../config/activitylog.php', app_path('config/activitylog.php'));
+		}
 	}
 
 	/**
