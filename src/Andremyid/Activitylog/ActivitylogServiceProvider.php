@@ -43,8 +43,8 @@ class ActivitylogServiceProvider extends ServiceProvider {
 			'Andremyid\Activitylog\Handlers\EloquentHandler'
 			);
 
-		if (! empty(Config::get('activitylog.autoAliasLoader')) || ! empty(Config::get('activitylog::autoAliasLoader'))) {
-			if (Config::get('activitylog.autoAliasLoader') == true || Config::get('activitylog::autoAliasLoader') == true) {
+		if (! empty(Config::get('activitylog.autoAliasLoader'))) {
+			if (Config::get('activitylog.autoAliasLoader') == true) {
 				$loader = \Illuminate\Foundation\AliasLoader::getInstance();
 				$loader->alias('Activity', 'Andremyid\Activitylog\ActivitylogFacade');
 			}

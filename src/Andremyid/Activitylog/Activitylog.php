@@ -11,7 +11,7 @@ class Activitylog {
 	public function __construct(Handlers\ActivitylogHandlerInterface $handler)
 	{
 		$this->logHandlers[] = $handler;
-		if (! empty(Config::get('activitylog.alsoLogInDefaultLog')) || ! empty(Config::get('activitylog::alsoLogInDefaultLog'))) {
+		if (! empty(Config::get('activitylog.alsoLogInDefaultLog'))) {
 			$this->logHandlers[] = new Handlers\ActivitylogHandler();
 		}
 	}
@@ -38,7 +38,7 @@ class Activitylog {
 	public function cleanLog()
 	{
 		foreach ($this->logHandlers as $logHandler) {
-			$logHandler->cleanLog(Config::get('activitylog.deleteRecordsOlderThanMonths') || Config::get('activitylog::deleteRecordsOlderThanMonths'));
+			$logHandler->cleanLog(Config::get('activitylog.deleteRecordsOlderThanMonths'));
 		}
 
 		return true;
