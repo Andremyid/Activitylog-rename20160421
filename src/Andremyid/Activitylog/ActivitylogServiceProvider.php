@@ -28,8 +28,8 @@ class ActivitylogServiceProvider extends ServiceProvider {
 
 		if (! Schema::hasTable('user_activity_log')) {
 			copy(
-				__DIR__ . '/../../migrations/2016_00_02_000001_create_user_activity_logs_table', 
-				app_path('database/migrations/2016_00_02_000001_create_user_activity_logs_table')
+				__DIR__ . '/../../migrations/2016_00_02_000001_create_user_activity_logs_table.php', 
+				app_path('database/migrations/2016_00_02_000001_create_user_activity_logs_table.php')
 				);
 		}
 	}
