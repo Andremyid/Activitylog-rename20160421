@@ -1,6 +1,5 @@
 {
     "name": "andremyid/activitylog",
-    "description": "",
     "description": "Sample activity logger to monitor the users of my website or application (http://www.andre.my.id) Framework",
     "keywords": ["andremyid", "framework", "log", "user", "activity"],
     "homepage": "http://www.andre.my.id",
