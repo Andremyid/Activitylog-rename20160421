@@ -24,6 +24,13 @@ class ActivitylogServiceProvider extends ServiceProvider {
 		if (! file_exists(app_path('config/activitylog.php'))) {
 			copy(__DIR__ . '/../../config/activitylog.php', app_path('config/activitylog.php'));
 		}
+
+		if (! Schema::hasTable('user_activity_log')) {
+			copy(
+				__DIR__ . '/../../migrations/2016_00_02_000001_create_user_activity_logs_table', 
+				app_path('database/migrations/2016_00_02_000001_create_user_activity_logs_table')
+				);
+		}
 	}
 
 	/**
