@@ -2,6 +2,7 @@
 
 use Illuminate\Support\ServiceProvider;
 use Config;
+use Schema;
 
 class ActivitylogServiceProvider extends ServiceProvider {
 
